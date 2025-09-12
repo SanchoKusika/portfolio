@@ -2,6 +2,7 @@
 	max-width: calc(var(--index) * 21);
 	max-height: 180vh;
 	border-radius: 8px;
+	overflow-x: hidden;
 
 	@media (max-width: 767.98px) {
 		max-width: 100%;
@@ -11,6 +12,7 @@
 .text-block {
 	position: relative;
 	color: var(--color-text);
+	overflow-x: hidden;
 
 	&.portfolio__item:not(:last-child) {
 		margin-bottom: var(--gallery-gap);

@@ -24,6 +24,7 @@
 
 .hero-header {
 	height: 100vh;
+	overflow: hidden;
 
 	@media (max-width: 575.98px) {
 		height: auto;
@@ -36,7 +37,7 @@
 	width: min-content;
 	bottom: 13vh;
 	line-height: 0.9;
-
+	overflow: hidden;
 	@media (max-width: 575.98px) {
 		font-size: calc(var(--index) * 5.5);
 		position: static;
