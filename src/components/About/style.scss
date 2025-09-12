@@ -1,0 +1,9 @@
+.about {
+	&__desc {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		line-height: 2rem;
+		color: var(--color-text);
+	}
+}

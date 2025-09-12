@@ -1,0 +1,73 @@
+@import url("./reset.scss");
+
+:root {
+	--index: calc(1vw + 1vh);
+	--color-header: #f4efec;
+	--color-text: #cdc6c3;
+
+	--blending: hard-light;
+	--circle-size: 60%;
+
+	--grad-1: #ffa6fc;
+	--grad-2: #fc490b;
+	--grad-3: #cdc6c3;
+
+	--gallery-gap: calc(var(--index) * 10);
+
+	--telegram-color: #26a5e4;
+	--whatsapp-color: #25d366;
+	--instagram-color: #e1306c;
+	--email-color: #ffb703;
+}
+
+@font-face {
+	font-family: raleway-p;
+	src: url(./assets/fonts/raleway-regular.woff2);
+}
+@font-face {
+	font-family: outfit-p;
+	src: url(./assets/fonts/outfit-regular.woff2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: outfit-p;
+}
+
+/* GSAP will change */
+.content,
+.hero,
+.hero-header,
+.gallery > *,
+.section-title,
+.split > *,
+.split > * > *,
+.skill__content {
+	will-change: transform, opacity;
+}
+
+body {
+	background-color: #131313;
+	color: #fafafa;
+	font-family: raleway-p;
+	overflow-x: hidden;
+}
+
+.content {
+	padding-top: var(--header-height);
+}
+
+.container {
+	padding: 0 7vw;
+	margin: 0 auto;
+}
+
+.section-title {
+	font-size: calc(var(--index) * 4);
+	text-align: center;
+	margin-bottom: 1rem;
+}

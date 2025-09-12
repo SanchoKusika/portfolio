@@ -1,0 +1,21 @@
+.social {
+	padding: 20px;
+	text-align: center;
+	color: var(--color-header);
+	transition: color 0.3s ease, transform 0.3s ease;
+
+	&:hover {
+		transform: scale(1.06);
+	}
+
+	&__img {
+		svg {
+			width: 3rem;
+		}
+	}
+
+	&__title {
+		font-size: 1.2rem;
+		min-width: 100px;
+	}
+}

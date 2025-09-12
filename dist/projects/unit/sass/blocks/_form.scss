@@ -1,0 +1,35 @@
+/* Form inside */
+.input {
+	padding-left: 30px;
+	padding-right: 30px;
+	display: block;
+	height: 60px;
+	border-radius: 30px;
+	border: none;
+	background-color: rgba(0, 0, 0, 0.75);
+
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+
+	&::placeholder {
+		color: #fff;
+	}
+
+	&:focus {
+		outline: none;
+		background-color: rgba(0, 0, 0, 1);
+	}
+
+	/* Mobile */
+	@media (max-width: 899px) {
+		padding-left: 46px;
+		padding-right: 46px;
+	}
+
+	/* Mobile XS */
+	@media (max-width: 599px) {
+		padding-left: 36px;
+		padding-right: 36px;
+	}
+}

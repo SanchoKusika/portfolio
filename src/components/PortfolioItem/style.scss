@@ -1,0 +1,29 @@
+.portfolio__item {
+	max-width: calc(var(--index) * 21);
+	max-height: 180vh;
+	border-radius: 8px;
+
+	@media (max-width: 767.98px) {
+		max-width: 100%;
+	}
+}
+
+.text-block {
+	position: relative;
+	color: var(--color-text);
+
+	&.portfolio__item:not(:last-child) {
+		margin-bottom: var(--gallery-gap);
+	}
+
+	&__title {
+		font-size: 2rem;
+		line-height: 2.4rem;
+		color: var(--color-header);
+		margin-bottom: 1rem;
+	}
+	&__desc {
+		line-height: 1.75;
+		margin-bottom: 1rem;
+	}
+}

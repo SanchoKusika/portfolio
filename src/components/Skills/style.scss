@@ -1,0 +1,27 @@
+.skills {
+	padding: 120px 0;
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.7rem;
+		justify-content: center;
+
+		.skill {
+			flex: 0 1 calc((100% - (5 - 1) * 0.7rem) / 5);
+
+			@media (max-width: 1199.98px) {
+				flex-basis: calc((100% - (4 - 1) * 0.7rem) / 4);
+			}
+
+			@media (max-width: 991.98px) {
+				flex-basis: calc((100% - (2 - 1) * 0.7rem) / 2);
+			}
+
+			@media (max-width: 575.98px) {
+				flex-basis: unset;
+				width: 100%;
+			}
+		}
+	}
+}

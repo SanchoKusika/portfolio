@@ -1,0 +1,69 @@
+.section-cta {
+	position: relative;
+	padding-top: 83px;
+	padding-bottom: 84px;
+
+	/* Desktop MD*/
+	@media (max-width: 1600px) {
+		@include bgImage ('./../img/bg/cta-bg-1600.jpg');
+	}
+
+	/* Tablet */
+	@media (max-width: 1199px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+		@include bgImage ('./../img/bg/cta-bg-900.jpg');
+	}
+
+	/* Mobile */
+	@media (max-width: 899px) {
+		@include bgImage ('./../img/bg/cta-bg-600.jpg');
+	}
+	
+	/* Mobile XS */
+	@media (max-width: 599px) {
+		@include bgImage ('./../img/bg/cta-bg-320.jpg');
+	}
+
+	& .button {
+		display: inline-block;
+		text-decoration: none;
+	}
+
+	@include bgImage ('./../img/bg/cta-bg.jpg');
+
+	&::before {
+		@extend %overlay;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 9;
+		color: #FFF;
+		text-align: center;
+	}
+
+	&__title {
+		margin-bottom: 40px;
+		font-size: 22px;
+		font-weight: 500;
+		line-height: 1;
+
+		/* Mobile */
+		@media (max-width: 899px) {
+			margin-bottom: 30px;
+			font-size: 20px;
+		}
+
+		/* Mobile XS */
+		@media (max-width: 599px) {
+			margin-bottom: 20px;
+			font-size: 18px;
+		}
+
+		span {
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+	}
+}
