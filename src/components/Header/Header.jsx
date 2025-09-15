@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { useTranslation } from "react-i18next";
@@ -12,16 +13,28 @@ const Header = () => {
 	const menuRef = useRef(null);
 	const headerRef = useRef(null);
 	const menuButtonRef = useRef(null);
+	const smootherRef = useRef(null);
 	const { scrollToSection } = useSmoothScroll();
 
 	useEffect(() => {
+		smootherRef.current = ScrollSmoother.get();
+
 		if (isMenuOpen) {
+			if (smootherRef.current) {
+				smootherRef.current.paused(true);
+			}
 			document.body.style.overflow = "hidden";
 		} else {
+			if (smootherRef.current) {
+				smootherRef.current.paused(false);
+			}
 			document.body.style.overflow = "auto";
 		}
 
 		return () => {
+			if (smootherRef.current) {
+				smootherRef.current.paused(false);
+			}
 			document.body.style.overflow = "auto";
 		};
 	}, [isMenuOpen]);
