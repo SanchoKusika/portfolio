@@ -42,12 +42,9 @@ h6 {
 .content,
 .hero,
 .hero-header,
-.gallery > *,
-.section-title,
-.split > *,
-.split > * > *,
-.skill__content {
-	will-change: transform, opacity;
+.text-block.portfolio__item,
+.section-title {
+	will-change: transform;
 }
 
 body {
