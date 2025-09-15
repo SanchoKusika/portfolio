@@ -2,9 +2,12 @@ import { useState, useRef, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 import "./style.scss";
 
 const Header = () => {
+	const { t } = useTranslation();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const menuRef = useRef(null);
 	const headerRef = useRef(null);
@@ -68,7 +71,7 @@ const Header = () => {
 										handleAnchorClick(e, "#home")
 									}
 								>
-									Home
+									{t("header.home")}
 								</a>
 							</li>
 							<li>
@@ -78,7 +81,7 @@ const Header = () => {
 										handleAnchorClick(e, "#portfolio")
 									}
 								>
-									Portfolio
+									{t("header.portfolio")}
 								</a>
 							</li>
 							<li>
@@ -88,7 +91,7 @@ const Header = () => {
 										handleAnchorClick(e, "#about")
 									}
 								>
-									About
+									{t("header.about")}
 								</a>
 							</li>
 							<li>
@@ -98,7 +101,7 @@ const Header = () => {
 										handleAnchorClick(e, "#skills")
 									}
 								>
-									Skills
+									{t("header.skills")}
 								</a>
 							</li>
 							<li>
@@ -108,22 +111,25 @@ const Header = () => {
 										handleAnchorClick(e, "#contact")
 									}
 								>
-									Contact
+									{t("header.contact")}
 								</a>
 							</li>
 						</ul>
 					</nav>
 
-					<button
-						ref={menuButtonRef}
-						className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
-						onClick={toggleMenu}
-						aria-label="Toggle menu"
-					>
-						<span className="hamburger-line"></span>
-						<span className="hamburger-line"></span>
-						<span className="hamburger-line"></span>
-					</button>
+					<div className="header-controls">
+						<LanguageSwitcher />
+						<button
+							ref={menuButtonRef}
+							className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
+							onClick={toggleMenu}
+							aria-label="Toggle menu"
+						>
+							<span className="hamburger-line"></span>
+							<span className="hamburger-line"></span>
+							<span className="hamburger-line"></span>
+						</button>
+					</div>
 				</div>
 			</div>
 
@@ -138,7 +144,7 @@ const Header = () => {
 								href="#home"
 								onClick={(e) => handleAnchorClick(e, "#home")}
 							>
-								Home
+								{t("header.home")}
 								<span></span>
 							</a>
 						</li>
@@ -149,7 +155,7 @@ const Header = () => {
 									handleAnchorClick(e, "#portfolio")
 								}
 							>
-								Portfolio
+								{t("header.portfolio")}
 								<span></span>
 							</a>
 						</li>
@@ -158,7 +164,7 @@ const Header = () => {
 								href="#about"
 								onClick={(e) => handleAnchorClick(e, "#about")}
 							>
-								About
+								{t("header.about")}
 								<span></span>
 							</a>
 						</li>
@@ -167,7 +173,7 @@ const Header = () => {
 								href="#skills"
 								onClick={(e) => handleAnchorClick(e, "#skills")}
 							>
-								Skills
+								{t("header.skills")}
 								<span></span>
 							</a>
 						</li>
@@ -178,7 +184,7 @@ const Header = () => {
 									handleAnchorClick(e, "#contact")
 								}
 							>
-								Contact
+								{t("header.contact")}
 								<span></span>
 							</a>
 						</li>

@@ -16,10 +16,12 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Skills = () => {
+	const { t } = useTranslation();
 	useSectionTitleGsap({ end: "-=50", scrub: true });
 	const wrapperRef = useRef(null);
 
@@ -47,7 +49,7 @@ const Skills = () => {
 	return (
 		<section id="skills" className="skills">
 			<div className="container">
-				<h2 className="section-title">Skills & Technologies</h2>
+				<h2 className="section-title">{t("skills.title")}</h2>
 				<div ref={wrapperRef} className="skills__wrapper">
 					<Skill img={<FaHtml5 color="#FC490B" />} title="HTML" />
 					<Skill

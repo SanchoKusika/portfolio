@@ -1,0 +1,28 @@
+.language-switcher {
+	position: relative;
+	background: transparent;
+	border: none;
+	color: var(--color-header);
+	font-family: raleway-p;
+	font-size: 1rem;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 0.2rem;
+	padding: 0.5rem;
+	border-radius: 10px;
+	transition: background-color 0.3s ease;
+
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	.active {
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+	.divider {
+		opacity: 0.7;
+	}
+}

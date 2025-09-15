@@ -1,9 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import heroImg from "../../assets/img/hero.png";
+import { useTranslation } from "react-i18next";
 import "./style.scss";
 
 const Hero = () => {
+	const { t } = useTranslation();
 	useGSAP(() => {
 		gsap.fromTo(
 			".hero-section",
@@ -25,7 +27,7 @@ const Hero = () => {
 			<img data-speed=".6" className="hero" src={heroImg} alt="Hero" />
 			<div className="container">
 				<div data-speed=".75" className="hero-header">
-					<h1 className="hero-title">Aleksandr Kuznetsov</h1>
+					<h1 className="hero-title">{t("hero.title")}</h1>
 				</div>
 			</div>
 		</section>

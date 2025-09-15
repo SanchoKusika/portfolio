@@ -1,0 +1,57 @@
+{
+	"header": {
+		"home": "Home",
+		"portfolio": "Portfolio",
+		"about": "About",
+		"skills": "Skills",
+		"contact": "Contact"
+	},
+	"hero": {
+		"title": "Aleksandr Kuznetsov"
+	},
+	"projects": {
+		"dacha": {
+			"title": "Dacha Côté d'Azur",
+			"description": "Website providing stylist services"
+		},
+		"elegant": {
+			"title": "Elegant store",
+			"description": "A website that sells headphones"
+		},
+		"unit": {
+			"title": "Unit Project",
+			"description": "Website about the Unit app, which helps manage tasks"
+		},
+		"sport": {
+			"title": "LightSport",
+			"description": "Website for selling sports services"
+		},
+		"mesto": {
+			"title": "Mesto Project",
+			"description": "A site for general use. You can create, delete, and like posts"
+		},
+		"sushi": {
+			"title": "Sushi Shop",
+			"description": "Sushi order page with admin panel, order history, and authentication"
+		},
+		"board": {
+			"title": "BoardNotes",
+			"description": "ToDo website with the ability to attach files, authentication, account data configuration, and creation of multi-user sessions"
+		}
+	},
+	"about": {
+		"title": "About Me",
+		"description1": "I'm a frontend developer who truly loves web development and everything related to it. I enjoy turning ideas and mockups into user-friendly, intuitive pages: from thoughtful structure and clean layout to the small interface details that make interactions enjoyable 💻 ✨",
+		"description2": "I pay close attention to performance and accessibility — I believe a website should load quickly and be comfortable for as many people as possible. In my work, I value clean, understandable, and maintainable code: it saves time in the future and makes projects easier to grow. I love collaborating with designers and clients, discussing flows and interface behavior, testing solutions, and refining them to a stable state ⚡🤝",
+		"description3": "Getting feedback from users and seeing that the website truly solves their problem is the most rewarding result for me 📊🙌"
+	},
+	"skills": {
+		"title": "Skills & Technologies"
+	},
+	"contact": {
+		"title": "Contact"
+	},
+	"footer": {
+		"text": "Aleksandr Kuznetsov. All rights reserved."
+	}
+}

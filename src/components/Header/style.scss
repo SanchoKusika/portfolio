@@ -36,10 +36,14 @@
 		color: var(--color-header);
 		text-transform: uppercase;
 		letter-spacing: 1px;
+
+		@media (max-width: 575.98px) {
+			font-size: 1rem;
+		}
 	}
 
 	.nav-desktop {
-		@media (max-width: 991.98px) {
+		@media (max-width: 1199.98px) {
 			display: none;
 		}
 
@@ -83,6 +87,12 @@
 		}
 	}
 
+	.header-controls {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
 	.menu-toggle {
 		display: none;
 		flex-direction: column;
@@ -96,7 +106,7 @@
 		z-index: 4;
 		position: relative;
 
-		@media (max-width: 991.98px) {
+		@media (max-width: 1199.98px) {
 			display: flex;
 		}
 

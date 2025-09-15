@@ -3,10 +3,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import useSectionTitleGsap from "../../hooks/useSectionTitleGsap";
+import { useTranslation } from "react-i18next";
 import "./style.scss";
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
 
 const About = () => {
+	const { t } = useTranslation();
 	useSectionTitleGsap({ end: "-=50", scrub: true });
 	useGSAP(() => {
 		document.fonts.ready.then(() => {
@@ -33,29 +35,16 @@ const About = () => {
 	return (
 		<section id="about" className="about">
 			<div className="container">
-				<h2 className="section-title">About Me</h2>
+				<h2 className="section-title">{t("about.title")}</h2>
 				<div className="about__desc">
 					<p className="split">
-						I’m a frontend developer who truly loves web development
-						and everything related to it. I enjoy turning ideas and
-						mockups into user-friendly, intuitive pages: from
-						thoughtful structure and clean layout to the small
-						interface details that make interactions enjoyable 💻 ✨
+						{t("about.description1")}
 					</p>
 					<p className="split">
-						I pay close attention to performance and accessibility —
-						I believe a website should load quickly and be
-						comfortable for as many people as possible. In my work,
-						I value clean, understandable, and maintainable code: it
-						saves time in the future and makes projects easier to
-						grow. I love collaborating with designers and clients,
-						discussing flows and interface behavior, testing
-						solutions, and refining them to a stable state ⚡🤝
+						{t("about.description2")}
 					</p>
 					<p className="split">
-						Getting feedback from users and seeing that the website
-						truly solves their problem is the most rewarding result
-						for me 📊🙌
+						{t("about.description3")}
 					</p>
 				</div>
 			</div>

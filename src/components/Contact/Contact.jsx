@@ -10,10 +10,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useSectionTitleGsap from "../../hooks/useSectionTitleGsap";
 import "./style.scss";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Contact = () => {
+	const { t } = useTranslation();
 	useSectionTitleGsap({ end: "-=50", scrub: true });
 	const wrapperRef = useRef(null);
 	useGSAP(() => {
@@ -39,12 +41,12 @@ const Contact = () => {
 	return (
 		<section id="contact" className="contact">
 			<div className="container">
-				<h2 className="section-title">Contact</h2>
+				<h2 className="section-title">{t("contact.title")}</h2>
 				<div ref={wrapperRef} className="contact__wrapper">
 					<Social
 						type="email"
 						img={<MdEmail color="#ffb703" />}
-						title="Email me"
+						title="Email"
 						href="mailto:sanchezzkusika@gmail.com"
 					/>
 					<Social

@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslation } from "react-i18next";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 import "./style.scss";
@@ -15,6 +16,7 @@ import work7 from "../../assets/img/work/7.png";
 import PortfolioItem from "../PortfolioItem/PortfolioItem";
 
 const Portfolio = () => {
+	const { t } = useTranslation();
 	useGSAP(() => {
 		let itemsL = gsap.utils.toArray(".gallery__left .portfolio__item");
 		let itemsR = gsap.utils.toArray(".gallery__right .portfolio__item");
@@ -69,47 +71,40 @@ const Portfolio = () => {
 				<main className="gallery">
 					<div className="gallery__left">
 						<PortfolioItem
-							title="Dacha Côté d'Azur"
+							projectId="dacha"
 							img={work1}
-							desc="Website providing stylist services"
 							href="https://dachacotedazur.com/"
 						/>
 						<PortfolioItem
-							title="Elegant store"
+							projectId="elegant"
 							img={work2}
-							desc="A website that sells headphones"
 							href="./projects/elegant/index.html"
 						/>
 						<PortfolioItem
-							title="Unit Project"
+							projectId="unit"
 							img={work3}
-							desc="Website about the Unit app, which helps manage tasks"
 							href="./projects/unit/index.html"
 						/>
 					</div>
 					<div className="gallery__right">
 						<PortfolioItem
-							title="LightSport"
+							projectId="sport"
 							img={work4}
-							desc="Website for selling sports services"
 							href="./projects/sport/index.html"
 						/>
 						<PortfolioItem
-							title="Mesto Project"
+							projectId="mesto"
 							img={work5}
-							desc="A site for general use. You can create, delete, and like posts"
 							href="https://sanchokusika.github.io/mesto-project/"
 						/>
 						<PortfolioItem
-							title="Sushi Shop"
+							projectId="sushi"
 							img={work6}
-							desc="Sushi order page with admin panel, order history, and authentication"
 							href="./projects/sushi/index.html"
 						/>
 						<PortfolioItem
-							title="BoardNotes"
+							projectId="board"
 							img={work7}
-							desc="ToDo website with the ability to attach files, authentication, account data configuration, and creation of multi-user sessions"
 							href="./projects/board/index.html"
 						/>
 					</div>
