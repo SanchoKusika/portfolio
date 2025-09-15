@@ -31,7 +31,7 @@ const Portfolio = () => {
 						trigger: item,
 						start: "-=850",
 						end: "-=100",
-						scrub: true,
+						scrub: false,
 					},
 				}
 			);
@@ -47,20 +47,10 @@ const Portfolio = () => {
 						trigger: item,
 						start: "-=850",
 						end: "-=100",
-						scrub: true,
+						scrub: false,
 					},
 				}
 			);
-		});
-
-		gsap.to(".portfolio", {
-			opacity: 0,
-			scrollTrigger: {
-				trigger: ".portfolio",
-				start: "bottom 50%",
-				end: "bottom 20%",
-				scrub: true,
-			},
 		});
 	}, []);
 

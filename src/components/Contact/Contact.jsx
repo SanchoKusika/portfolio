@@ -16,7 +16,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Contact = () => {
 	const { t } = useTranslation();
-	useSectionTitleGsap({ end: "-=50", scrub: true });
+	useSectionTitleGsap({ end: "-=50", scrub: false });
 	const wrapperRef = useRef(null);
 	useGSAP(() => {
 		const wrapper = wrapperRef.current;
@@ -34,7 +34,7 @@ const Contact = () => {
 				trigger: wrapper,
 				start: "top 80%",
 				end: "top 50%",
-				scrub: true,
+				scrub: false,
 			},
 		});
 	}, []);

@@ -8,7 +8,7 @@ const useSectionTitleGsap = (options = {}) => {
 	const {
 		selector = ".section-title",
 		end = "-=50",
-		scrub = true,
+		scrub = false,
 		markers = false,
 	} = options;
 
