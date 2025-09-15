@@ -51,6 +51,9 @@
 	"contact": {
 		"title": "Contact"
 	},
+	"resume": {
+		"title": "Resume"
+	},
 	"footer": {
 		"text": "Aleksandr Kuznetsov. All rights reserved."
 	}

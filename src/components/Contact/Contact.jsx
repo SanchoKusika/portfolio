@@ -3,6 +3,7 @@ import { MdEmail } from "react-icons/md";
 import { FaTelegram } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
+import { FaFileDownload } from "react-icons/fa";
 
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -11,6 +12,7 @@ import useSectionTitleGsap from "../../hooks/useSectionTitleGsap";
 import "./style.scss";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
+import ResumeBtn from "../ResumeBtn/ResumeBtn";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -20,11 +22,12 @@ const Contact = () => {
 	const wrapperRef = useRef(null);
 	useGSAP(() => {
 		const wrapper = wrapperRef.current;
-		const items = gsap.utils.toArray(".social__content");
+		const socialItems = gsap.utils.toArray(".social__content");
+		const resumeBtn = document.querySelector(".resume");
 
-		gsap.set(items, { opacity: 0, y: 20 });
+		gsap.set(socialItems, { opacity: 0, y: 20 });
 
-		gsap.to(items, {
+		gsap.to(socialItems, {
 			opacity: 1,
 			y: 0,
 			duration: 0.6,
@@ -37,6 +40,23 @@ const Contact = () => {
 				scrub: false,
 			},
 		});
+
+		if (resumeBtn) {
+			gsap.set(resumeBtn, { opacity: 0, y: 20 });
+
+			gsap.to(resumeBtn, {
+				opacity: 1,
+				y: 0,
+				duration: 0.6,
+				ease: "power1.out",
+				scrollTrigger: {
+					trigger: wrapper,
+					start: "top 80%",
+					end: "top 50%",
+					scrub: false,
+				},
+			});
+		}
 	}, []);
 	return (
 		<section id="contact" className="contact">
@@ -68,6 +88,10 @@ const Contact = () => {
 						href="https://www.instagram.com/sanchokusika/"
 					/>
 				</div>
+				<ResumeBtn
+					title={t("resume.title")}
+					img={<FaFileDownload color="#fafafa" />}
+				/>
 			</div>
 		</section>
 	);
