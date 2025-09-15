@@ -16,7 +16,7 @@ import work7 from "../../assets/img/work/7.png";
 import PortfolioItem from "../PortfolioItem/PortfolioItem";
 
 const Portfolio = () => {
-	const { t } = useTranslation();
+	const { t, i18n } = useTranslation();
 	useGSAP(() => {
 		let itemsL = gsap.utils.toArray(".gallery__left .portfolio__item");
 		let itemsR = gsap.utils.toArray(".gallery__right .portfolio__item");
@@ -63,7 +63,7 @@ const Portfolio = () => {
 				scrub: true,
 			},
 		});
-	}, []);
+	}, [i18n.language]); // Re-run when language changes
 
 	return (
 		<section id="portfolio" className="portfolio">
