@@ -48,9 +48,11 @@ h6 {
 .section-title {
 	will-change: transform;
 }
-
+html,
 body {
 	background-color: #131313;
+}
+body {
 	color: #fafafa;
 	font-family: raleway-p;
 	overflow-x: hidden;
